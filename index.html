@@ -10,6 +10,9 @@
           background-size: cover;
           
         }
+        img{
+          width: 50px;
+        }
         iframe{
           width: 500px;
           height: 250px;
@@ -50,7 +53,9 @@
             border: 2px solid whitesmoke;
             padding: 12px;
             background-color: #ff0000c7;
-            text-shadow: black 0.1em 0.1em 0.2em
+            text-shadow: black 0.1em 0.1em 0.2em;
+            width: 70%;
+            
         }
         h2{
             text-align: center;
@@ -72,24 +77,7 @@
         }
         .links:hover{
             text-decoration: underline;
-        }
-        .button{
-            transition: all 220ms ease-in-out;
-            background: #ff0000;
-            color: aliceblue;
-            border: none;
-            border-radius: 15px;
-            box-shadow: 6px 6px 12px rgb(0, 0, 0, 60);
-            font-size: 20px;
-            display: block;
-            margin: 10px auto;
-            padding: 10px 8px;
-        }
-        button:hover{
-            opacity: 0.7;
-            cursor: pointer;
-            
-        }
+        } 
         .cuerpo{
             margin: 0 auto;
             padding: 20px 50px;
@@ -97,9 +85,6 @@
             background: rgba(241, 93, 113, 0.4);
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
-
-
-
         .footer{
             font-size: 12px;
             color: #352f44;
@@ -108,11 +93,40 @@
         span{
           font-family: cursive;
         }
+        .button-pedir {
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            font-weight: 700;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-family: arial;
+            color: #fff;
+            background-color: #ff0000;
+            text-decoration: none;
+            border-radius: 7px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .button:hover {
+            background-color: #cc0000;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            border-color: white;
+            border: 2px solid #fff;
+            font-size: 25px;
+            transition: 0.6s;
+        }       
+
+
+
     </style>
   </head>
   <body>
     <div class="cuerpo">
-    <h1>Sucursales</h1>
+    <h1>Mr. John's Sucursales</h1><img src="logotransp.png">
     <span><h2>Te esperamos en:</h2></span>
     <hr>
       <ul>
@@ -127,11 +141,9 @@
       </ul>
 
     </p>
-    </body>
-
-    <button class="button" role="link" href="https://www.google.com/">Pizza a domicilio</a>
-
-    </button>
+    <div class="button-pedir">
+      <a href="https://api.whatsapp.com/send?phone=595982101590" class="button" target="_blank">¡Pedí tu pizza favorita!</a>
+    </div>
     <footer>
       <address><p class="footer">This page was built by UAA students</a></address>
       </p>
