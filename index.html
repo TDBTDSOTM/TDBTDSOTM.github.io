@@ -1,156 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sucursales</title>
+    <link rel="shortcut icon" href="logotransp.png">
+</head>
     <style>
-        body {
-            background-image: url(fondo1.jpg);
-            background-size: cover;
-            margin: 0;
-            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-        }
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 20px 0;
+      body {
+        background-image: url(fondo1.jpg);
+        background-size: cover;
+        margin: 0;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .header-contenido {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px 0;
+      }
+      h1 {
+        color: white;
+        border-radius: 10px;
+        border: 2px solid whitesmoke;
+        padding: 12px;
+        background-color: #ff0000c7;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        display: inline;
+        margin: 0 10px;
+        text-align: center;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        flex: 1 1 100%;
+      }
+      img {
+        border-radius: 25px;
+        width: 100px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        margin: 10px 0;
+        flex: 0 0 auto;
+      }
+      h2 {
+        text-align: center;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        text-shadow: black 0.1em 0.1em 0.2em;
+      }
+      .cuerpo {
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 1000px;
+        background: rgba(241, 93, 113, 0.4);
+      }
+      ul {
+        font-size: 20px;
+        text-align: center;
+        list-style: none;
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 20px;
+      }
+      iframe {
+        width: 100%;
+        height: 250px;
+        border-radius: 25px;
+        border: 7px solid rgb(238, 127, 127);
+        margin: 15px 0;
+      }
+      .button-pedir {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .button {
+        display: inline-block;
+        font-weight: 700;
+        padding: 10px 20px;
+        font-size: 20px;
+        font-family: Arial;
+        color: #fff;
+        background-color: #ff0000;
+        text-decoration: none;
+        border-radius: 7px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, box-shadow 0.3s;
+      }
+      .button:hover {
+        background-color: #cc0000;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        border: 2px solid #fff;
+        font-size: 25px;
+        transition: 0.6s;
+      }
+      .footer {
+        font-size: 12px;
+        color: #352f44;
+        text-align: center;
+      }
+      address {
+        margin: 20px 0;
+      }
+
+      @media (min-width: 600px) {
+        .header-contenido img {
+          width: 100px;
+          margin-left: 35px;
+          margin-right: 30px;
         }
         h1 {
-            color: white;
-            border-radius: 10px;
-            border: 2px solid whitesmoke;
-            padding: 12px;
-            background-color: #ff0000c7;
-            text-shadow: black 0.1em 0.1em 0.2em;
-            display: inline;
-            margin: 0 10px;
-            text-align: center;
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-            flex: 1 1 100%;
-        }
-        img {
-            border-radius: 25px;
-            width: 100px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-            margin: 10px 0;
-            flex: 0 0 auto;
-        }
-        h2 {
-            text-align: center;
-            font-size: 20px;
-            color: rgb(255, 255, 255);
-            text-shadow: black 0.1em 0.1em 0.2em;
-        }
-        .cuerpo {
-            margin: 0 auto;
-            padding: 20px;
-            max-width: 1000px;
-            background: rgba(241, 93, 113, 0.4);
-        }
-        ul {
-            font-size: 20px;
-            text-align: center;
-            list-style: none;
-            color: white;
-            text-shadow: black 0.1em 0.1em 0.2em;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 20px;
+          width: auto;
+          flex: 1;
         }
         iframe {
-            width: 100%;
-            height: 250px;
-            border-radius: 25px;
-            border: 7px solid rgb(238, 127, 127);
-            margin: 15px 0;
+          width: 500px;
+          height: 250px;
         }
-        .button-pedir {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .button {
-            display: inline-block;
-            font-weight: 700;
-            padding: 10px 20px;
-            font-size: 20px;
-            font-family: Arial;
-            color: #fff;
-            background-color: #ff0000;
-            text-decoration: none;
-            border-radius: 7px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-        .button:hover {
-            background-color: #cc0000;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            border: 2px solid #fff;
-            font-size: 25px;
-            transition: 0.6s;
-        }
-        .footer {
-            font-size: 12px;
-            color: #352f44;
-            text-align: center;
-        }
-        address {
-            margin: 20px 0;
-        }
-
-        @media (min-width: 600px) {
-            .header-container img {
-                width: 120px;
-                margin-left: 50px;
-            }
-            h1 {
-                width: auto;
-                flex: 1;
-            }
-            iframe {
-                width: 500px;
-                height: 250px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="cuerpo">
-        <div class="header-container">
-            <h1>Mr. John's Sucursales</h1>
-            <img src="logotransp.png" alt="Logo">
-        </div>
-        <span><h2>Te esperamos en:</h2></span>
-        <hr>
-        <ul>
-            <li>
-                Lambaré<br>Avda. Médicos del Chaco c/ Paz del Chaco<br>Horario de Atención: 10 a.m. a 00:00 h
-            </li>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8173.8234644337235!2d-57.6190892820598!3d-25.333057231153912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da96a3f8aebaf%3A0xeef01c480accf9d3!2sMr.%20John&#39;s!5e0!3m2!1ses-419!2sar!4v1719032955664!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <li>
-                Asunción, Barrio Herrera<br>Avda. Lilio y Rogelio Benítez<br>Horario de Atención: 10 a.m. a 00:00 h
-            </li>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18593.153559608785!2d-57.55986815888512!3d-25.290834538176256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da8b33163b455%3A0xdd30185b509e628b!2sMr.%20John&#39;s%20Pizzas%20Americanas!5e0!3m2!1ses-419!2sar!4v1719032847926!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <li>
-                Luque, Barrio Bella Vista<br>Avda. Fulgencio Yegros esq. Yrendague<br>Horario de Atención: 10 a.m. a 00:00 h
-            </li>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10404.250317718717!2d-57.491455344205015!3d-25.260157766340264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da594ea9255fb%3A0x4c6de4b824100d20!2sMr.%20John&#39;s%20Luque%20Bella%20vista!5e0!3m2!1ses-419!2sar!4v1719033028019!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <li>
-                Luque, Barrio Ycuadure<br>Avda. Las Residentas y San Juan<br>Horario de Atención: 18:00 a 00:00 h
-            </li>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2534.7624391117392!2d-57.47520164366652!3d-25.278114691566827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945dafe8f3ea96c3%3A0x4eae1b5ddd0969e0!2sMr.%20John&#39;s!5e0!3m2!1ses-419!2sar!4v1719033129579!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </ul>
-        <div class="button-pedir">
-            <a href="https://api.whatsapp.com/send?phone=595982101590" class="button" target="_blank">¡Pedí tu pizza favorita!</a>
-        </div>
-        <footer>
-            <address>
-                <p class="footer">This page was built by UAA students</p>
-            </address>
-        </footer>
+      <div class="header-contenido">
+        <h1>Mr. John's Sucursales</h1>
+        <img src="logotransp.png" alt="Logo" />
+      </div>
+      <span><h2>Te esperamos en:</h2></span>
+      <hr />
+      <ul>
+        <li>
+          Lambaré<br />Avda. Médicos del Chaco c/ Paz del Chaco<br />Horario de
+          Atención: 10 a.m. a 00:00 h
+        </li>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8173.8234644337235!2d-57.6190892820598!3d-25.333057231153912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da96a3f8aebaf%3A0xeef01c480accf9d3!2sMr.%20John&#39;s!5e0!3m2!1ses-419!2sar!4v1719032955664!5m2!1ses-419!2sar"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <li>
+          Asunción, Barrio Herrera<br />Avda. Lilio y Rogelio Benítez<br />Horario
+          de Atención: 10 a.m. a 00:00 h
+        </li>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18593.153559608785!2d-57.55986815888512!3d-25.290834538176256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da8b33163b455%3A0xdd30185b509e628b!2sMr.%20John&#39;s%20Pizzas%20Americanas!5e0!3m2!1ses-419!2sar!4v1719032847926!5m2!1ses-419!2sar"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <li>
+          Luque, Barrio Bella Vista<br />Avda. Fulgencio Yegros esq.
+          Yrendague<br />Horario de Atención: 10 a.m. a 00:00 h
+        </li>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10404.250317718717!2d-57.491455344205015!3d-25.260157766340264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da594ea9255fb%3A0x4c6de4b824100d20!2sMr.%20John&#39;s%20Luque%20Bella%20vista!5e0!3m2!1ses-419!2sar!4v1719033028019!5m2!1ses-419!2sar"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <li>
+          Luque, Barrio Ycuadure<br />Avda. Las Residentas y San Juan<br />Horario
+          de Atención: 18:00 a 00:00 h
+        </li>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2534.7624391117392!2d-57.47520164366652!3d-25.278114691566827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945dafe8f3ea96c3%3A0x4eae1b5ddd0969e0!2sMr.%20John&#39;s!5e0!3m2!1ses-419!2sar!4v1719033129579!5m2!1ses-419!2sar"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </ul>
+      <div class="button-pedir">
+        <a
+          href="https://api.whatsapp.com/send?phone=595982101590"
+          class="button"
+          target="_blank"
+          >¡Pedí tu pizza favorita!</a
+        >
+      </div>
+      <footer>
+        <address>
+          <p class="footer">This page was built by UAA students</p>
+        </address>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
